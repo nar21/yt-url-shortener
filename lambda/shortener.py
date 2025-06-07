@@ -8,10 +8,7 @@ import os
 dynamodb = boto3.resource('dynamodb')
 
 def store_hash_url(hash_value, url, table_name=os.environ.get("DDB_TABLE")):
-    # Create a DynamoDB resource
-    # dynamodb = boto3.resource('dynamodb')
-
-    # Reference the table
+    # Get the table reference
     table = dynamodb.Table(table_name)
 
     try:
